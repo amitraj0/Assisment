@@ -1,0 +1,29 @@
+<form [formGroup]="Reactiveformcontrol" (ngSubmit)="OnSubmit()">
+<div class="form-group col-3">
+    <label>First Name</label>
+
+<input type="text" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.Name.errors }" >
+<div *ngIf="submitted && form.Name.errors" class="invalid-feedback">
+    <div *ngIf="form.Name.errors.required"> Name is required</div>
+</div>
+</div>
+<!-- <div class="form-group col-3">
+    <label>First Name</label>
+
+    <input type="text" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && form.Name.errors }" >
+    <div *ngIf="submitted && form.Name.errors" class="invalid-feedback">
+        <div *ngIf="form.Name.errors.required"> Name is required</div>
+    </div>
+    </div> -->
+<div>
+    <!-- <input type="text" formControlName="Address" class="form-control" [ngClass]='{is-invalid:submitted && form.Address.errors}'> -->
+<input type="text" formControlName="Address" class="form-control" [ngClass]="{'is-invalid':submitted && form.Address.errors}">
+<div *ngIf="submitted && form.Address.errors" class="invalid-feedback"> 
+    <div *ngIf="form.Address.errors.required" > Required</div>
+    <div *ngIf="form.Address.errors.maxLength" >Testing</div>
+</div>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary mr-1">Register</button>
+</div>
+</form>

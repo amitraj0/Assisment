@@ -1,0 +1,26 @@
+
+<div>
+<div align="right">  
+  <div class="column">
+  <a href="/Home" ><button mat-raised-button *ngIf='showlogbutton' (click)="clickbutton()"class="Loginbutton" >HOme </button></a>
+    <a href="/About" ><button mat-raised-button *ngIf='showlogbutton' (click)="clickbutton()"class="Loginbutton" >About us </button></a>
+    <a href="/Login" ><button mat-raised-button *ngIf='showlogbutton' (click)="clickbutton()"class="Loginbutton" >Login </button></a>
+    <a href="/Gallery" ><button mat-raised-button *ngIf='!showlogbutton' (click)="clickbutton()"class="Loginbutton" >Gallery </button></a>
+
+  </div>
+  </div>
+
+</div>
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>
+
+<br>
+
+<mat-divider></mat-divider>
+
+  <footer align="bottom">
+    <p align="center">
+    @2021 Copywrite Content
+  </p>
+  </footer>
+
